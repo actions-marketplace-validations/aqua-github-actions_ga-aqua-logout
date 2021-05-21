@@ -1,0 +1,31 @@
+{
+  "name": "aqua-logout",
+  "version": "1.0.0",
+  "description": "Used to logout from aqua cloud instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js --minify",
+    "watch": "ncc build index.js --watch --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniqueck/ga-aqua-logout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniqueck/ga-aqua-logout/issues"
+  },
+  "homepage": "https://github.com/uniqueck/ga-aqua-logout#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^5.0.0",
+    "node-rest-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.4",
+    "eslint": "^5.13.0"
+  }
+}

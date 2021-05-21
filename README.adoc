@@ -1,0 +1,46 @@
+= https://aqua-cloud.io[Aqua] Logout
+
+Used to logout from aqua cloud instance.
+
+== Usage
+An example workflow to logout from a aqua cloud instance:
+
+[source, yaml]
+----
+on: push
+
+name: Aqua Example
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Aqua Example
+    steps:
+    - name: Login
+      id: login
+      uses: uniqueck/ga-aqua-login@master
+      env:
+        AQUA_BASE_URL: ${{ secrets.AQUA_BASE_URL }}
+        AQUA_USERNAME: ${{ secrets.AQUA_USERNAME }}
+        AQUA_PASSWORD: ${{ secrets.AQUA_PASSWORD }}
+      with: # or as parameters
+        aqua-base-url: ${{ secrets.AQUA_BASE_URL }}
+        aqua-username: ${{ secrets.AQUA_USERNAME }}
+        aqua-password: ${{ secrets.AQUA_PASSWORD }}
+    - name: Generated bearer tokens
+      run: echo "Token ${{ steps.login.outputs.token }}"
+    - name: Logout
+      uses: uniqueck/ga-aqua-logout@master
+      with:
+        aqua-base-url: ${{ secrets.AQUA_BASE_URL }}
+        aqua-token: ${{ steps.login.outputs.token }}
+----
+
+== Action Spec:
+
+=== Enviroment variables
+- `AQUA_BASE_URL` - URL of aqua instance. Example: `https://aqua-saas2.andagon.com/aquaWebNG`
+
+=== Arguments
+- `aqua-base-url` - URL of aqua instance. Example `https://aqua-saas2.andagon.com/aquaWebNG`
+- `aqua-token` - Bearer token to logout from aqua.
