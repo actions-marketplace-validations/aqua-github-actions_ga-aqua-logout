@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "ncc build index.js --minify",
-    "watch": "ncc build index.js --watch --minify"
+    "watch": "ncc build index.js --watch --minify",
+    "eslint": "eslint '*.js'",
+    "eslint_fix": "eslint --fix '*.js'"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.4",
-    "eslint": "^5.13.0"
+    "eslint": "^5.13.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
