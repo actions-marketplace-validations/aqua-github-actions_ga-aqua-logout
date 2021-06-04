@@ -1,6 +1,6 @@
 :organization: aqua-github-actions
-:aqua-login-version: 1.0.1
-:aqua-logout-version: 1.0.0
+:aqua-login-version: v1.0.1
+:aqua-logout-version: v1.0.0
 = https://aqua-cloud.io[Aqua] Logout
 
 Used to log out from aqua cloud instance.
