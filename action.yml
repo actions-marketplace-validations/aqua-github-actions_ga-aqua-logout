@@ -1,10 +1,10 @@
 name: 'Aqua Logout'
 description: 'Log out from aqua cloud instance.'
 branding:
-  icon: 'bookmark'
+  icon: 'droplet'
   color: 'blue'
 inputs:
-  aqua-base-url:  # id of input
+  aqua-base-url:
     description: 'Base url for aqua rest api'
     required: true
     default: 'https://aqua-saas2.andagon.com/aquaWebNG/api'
